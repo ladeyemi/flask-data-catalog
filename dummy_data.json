@@ -1,0 +1,19 @@
+
+    
+      
+       
+           {
+            "table_name": "valuations",
+            "title": "NDR Hereditament Valuations",
+            "version":"V0.3.0",
+            "description":"20 variable table detailing NNDR valuations. Table not constrained by list year",
+            "tags":"curated from CDB data tables - Hereditament_valuations, Survey_Unit, Scales",
+            "data_owner":"table creator being used as place holder olanrewaju.adeyemi@voa.gsi.gov.uk",
+            "location":"/dev-dap-lake/zones/reading/coda/valuations",
+            "provenance":"table maintained by an SQL Stored Procedure which is pulled from POMI_DATA to CODA",
+            "update_type":"Daily",
+            "supported":["currently in support", "being depricated by 'date'"]
+           } 
+      
+
+                          
