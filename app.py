@@ -1,6 +1,6 @@
 import json
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
@@ -12,12 +12,8 @@ def index():
 def catalog(): 
     return render_template("catalog.html")
 
-@app.route('/accordion/')
-def accordion():
-    return render_template("accordion.html")
-
-@app.route('/dummy/<id>')
-def dummy(id):
+@app.route('/dummy')
+def dummy():
     with open ('small.json', 'r') as jsonfile:  
         file_data = json.loads(jsonfile.read())
 

@@ -1,87 +1,112 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Data Catalog</title> 
+<title>Data Catalog</title>
+
 
 {% endblock %}
 
 {% block body %}
 
 
-  <nav class="panel is-primary">
-    <p class="panel-heading">
-      Datasets
-    </p>
-    <div class="panel-block">
-      <p class="control has-icons-left">
-        <input class="input" type="text" placeholder="Search">
-        <span class="icon is-left">
-          <i class="fas fa-search" aria-hidden="true"></i>
-        </span>
-      </p>
+
+<h2>Data Catalog</h2>
+
+<div class="collapse-group">
+  <div class="controls">
+    <button class="btn btn-primary open-button" type="button">
+      Open all
+    </button>
+    <button class="btn btn-primary close-button" type="button">
+      Close all
+    </button>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="trigger collapsed">
+          Collapsible Group Item #1
+        </a>
+      </h4>
     </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum, soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae libero nostrum sed ipsam, beatae ea.
+      </div>
+    </div>
+  </div>
 
-  <section class="section">
-	<div class="container">
-		<div class="card is-fullwidth">
-			<header class="card-header">
-				<p class="card-header-title">Coda</p>
-				<a class="card-header-icon card-toggle">
-					<i class="fa fa-angle-down"></i>
-				</a>
-			</header>
-			<div class="card-content is-hidden">
-				<div class="content">
-					Content goes here <small>Small text</small>
-				</div>
-			</div>
-		</div>
-		
-		<div class="card is-fullwidth">
-			<header class="card-header">
-				<p class="card-header-title">Properties</p>
-				<a class="card-header-icon card-toggle">
-					<i class="fa fa-angle-down"></i>
-				</a>
-			</header>
-			<div class="card-content is-hidden">
-				<div class="content">
-					Content goes here <small>Small text</small>
-				</div>
-			</div>
-		</div>
-		
-		<div class="card is-fullwidth">
-			<header class="card-header">
-				<p class="card-header-title">Raw</p>
-				<a class="card-header-icon card-toggle">
-					<i class="fa fa-angle-down"></i>
-				</a>
-			</header>
-			<div class="card-content is-hidden">
-				<div class="content">
-					More dropdown style boxes here 
-				</div>
-			</div>
-        </div>
- 
-		<div class="card is-fullwidth">
-			<header class="card-header">
-				<p class="card-header-title">Reference</p>
-				<a class="card-header-icon card-toggle">
-					<i class="fa fa-angle-down"></i>
-				</a>
-			</header>
-			<div class="card-content is-hidden">
-				<div class="content">
-					Some more content. Look at all this whitespace. <small>(Unless you are on mobile)</small>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="trigger collapsed">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Sunt quia aperiam, officiis tempora quis quasi fugit ab ipsa quo expedita reiciendis quod iusto! Enim delectus unde voluptatem officiis molestiae repudiandae.
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="collapse-group">
+  <div class="controls">
+    <button class="btn btn-primary open-button" type="button">
+      Open all
+    </button>
+    <button class="btn btn-primary close-button" type="button">
+      Close all
+    </button>
+  </div>
 
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="trigger">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi molestiae dolorum, soluta temporibus vero perferendis quo odit eaque cum fugiat nihil earum error vitae libero nostrum sed ipsam, beatae ea.
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="trigger">
+          Collapsible Group Item #4
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+        Sunt quia aperiam, officiis tempora quis quasi fugit ab ipsa quo expedita reiciendis quod iusto! Enim delectus unde voluptatem officiis molestiae repudiandae.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script> 
+
+$(".open-button").on("click", function() {
+	$(this).closest('.collapse-group').find('.collapse').collapse('show');
+  });
+  
+  $(".close-button").on("click", function() {
+	$(this).closest('.collapse-group').find('.collapse').collapse('hide');
+  });
+
+</script>
 
 
 {% endblock %}
+
+

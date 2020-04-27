@@ -1,69 +1,112 @@
 {% extends 'base.html' %}
 
-{% block head %}
-<title>Data Catalog</title> 
-{% endblock %}
-
 {% block body %}
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="#">Data Catalog</a>
+</nav>
 
+<!-- Search form -->
+<div class="container md-form mt-2">
+  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+</div>
 
-<nav class="navbar is-light is-bold" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-          </a>             
-        </div>
-    <div class="navbar-menu">
-    <div class="navbar-end">
-        <a class="navbar-item">
-            Home
-            </a>
-
-        <a class="navbar-item">
-            Data
-            </a>
-
-        <a class="navbar-item">
-            Collections
-            </a>
-
-        <a class="navbar-item">
-            Getting Started
-            </a>
+<div class="container-fluid mt-3" id="accordion">
+  <div class="card">
+    <div class="card-header" id="heading-1">
+      <h5 class="mb-0">
+        <a role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+          Coda
+        </a>
+      </h5>
     </div>
-    </div>
-  </nav>
+    
+    <div id="collapse-1" class="collapse show" data-parent="#accordion" aria-labelledby="heading-1">
+      <div class="card-body">
 
+        <div id="accordion-1">
+          <div class="card">
+            <div class="card-header" id="heading-1-1">
+              <h5 class="mb-0">
+                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-1-1" aria-expanded="false" aria-controls="collapse-1-1">
+                  NDR
+                </a>
+              </h5>
+            </div>
+            <div id="collapse-1-1" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-1">
+              <div class="card-body">
 
-  <section class="section">
+             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi facere, magni in numquam, nisi soluta aut modi libero dolores fuga tenetur exercitationem incidunt officia delectus repudiandae commodi voluptate sed beatae!
+                    
+
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="heading-1-2">
+              <h5 class="mb-0">
+                <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-1-2" aria-expanded="false" aria-controls="collapse-1-2">
+                 CT
+                </a>
+              </h5>
+            </div>
+            <div id="collapse-1-2" class="collapse" data-parent="#accordion-1" aria-labelledby="heading-1-2">
+              <div class="card-body">
+               This is a journey into sound 
+              </div>
+            </div>
+          </div>
+        </div>      
       
-	<div class="container">
-       
-            <h1 class=" subtitle has-text-centered"> Search and learn about VOA Data</h1>
-    
-        <div class="field is-grouped">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Find a repository">
-            </p>
-            <p class="control">
-              <a class="button is-info">
-                Search
-              </a>
-            </p>
-          </div>
-          </div>
+      </div>
     </div>
-    
-</section>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading-2">
+      <h5 class="mb-0">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+          Properties
+        </a>
+      </h5>
+    </div>
+    <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-2">
+      <div class="card-body">
+        Welcome to the quarantine party!!!
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="heading-3">
+      <h5 class="mb-0">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+          Reference
+        </a>
+      </h5>
+    </div>
+    <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="heading-3">
+      <div class="card-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem omnis, recusandae doloremque beatae aspernatur eligendi maiores, neque tenetur quisquam expedita officiis maxime fugiat harum corrupti qui exercitationem suscipit quo nihil.
+      </div>
+    </div>
+  </div>
+ 
+  <div class="card">
+    <div class="card-header" id="heading-4">
+      <h5 class="mb-0">
+        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+          Raw
+        </a>
+      </h5>
+    </div>
+    <div id="collapse-4" class="collapse" data-parent="#accordion" aria-labelledby="heading-4">
+      <div class="card-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem omnis, recusandae doloremque beatae aspernatur eligendi maiores, neque tenetur quisquam expedita officiis maxime fugiat harum corrupti qui exercitationem suscipit quo nihil.
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
-
-
-{% endblock %}
-
-
-  </body>
-
+  {% endblock %}
 
 

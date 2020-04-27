@@ -1,12 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
-	let cardToggles = document.getElementsByClassName('card-toggle');
-	for (let i = 0; i < cardToggles.length; i++) {
-		cardToggles[i].addEventListener('click', e => {
-			e.currentTarget.parentElement.parentElement.childNodes[3].classList.toggle('is-hidden');
-		});
-	}
-});
-
-
-
-// alert('This is a test')
+$(".open-button").on("click", function() {
+    $(this).closest('.collapse-group').find('.collapse').collapse('show');
+  });
+  
+  $(".close-button").on("click", function() {
+    $(this).closest('.collapse-group').find('.collapse').collapse('hide');
+  });

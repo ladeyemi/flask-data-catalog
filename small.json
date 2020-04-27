@@ -5,7 +5,7 @@
        "email":"abarrow0@upenn.edu",
        "gender":"Male",
        "ip_address":"240.224.156.47"
-    },
+    }, 
     "2":{
        "first_name":"Sherie",
        "last_name":"Durno",
@@ -13,4 +13,5 @@
        "gender":"Female",
        "ip_address":"75.195.27.210"
     }
- }
+ } 
+
