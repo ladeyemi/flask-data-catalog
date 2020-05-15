@@ -21,7 +21,8 @@ def dummy():
     # print(type(id))
     # print(file_data)
 
-    return json.dumps(file_data[id])     
+    return json.dumps(file_data)
+
 
 if __name__ == '__main__':
     app.run(debug=True) 
