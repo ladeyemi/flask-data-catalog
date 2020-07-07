@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bulma-accordion": "^2.0.1",
-    "npm": "^6.14.4",
+    "npm": "^6.14.6",
     "start": "^5.1.0"
   },
   "devDependencies": {
